@@ -80,10 +80,10 @@ function get_script_dir {
 }
 
 function get_confirmation() {
-    read -p "Are you sure you want to $1? Enter 'yes': " mongo_confr
+    read -p "Are you sure you want to $1? [y/n]: " mongo_confr
 
     case $mongo_confr in
-        [yY][Ee][Ss] )  ;;
+        [yY] )  ;;
         *) echo "Incorrect input, aborting..."; exit;;
     esac
 }
